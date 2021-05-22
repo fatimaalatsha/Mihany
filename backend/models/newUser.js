@@ -1,23 +1,21 @@
 import mongoose from 'mongoose'
 
-const userSchema = mongoose.Schema({
+const AddNewUser = mongoose.Schema({
     
-    email :{
+    name :{
         type: String,
-        required: true,
         unique:true,
         trim: true
     },
-    name :{
+    password: {
         type: String,
         required: true,
-        minlength:3,
         trim: true
     },
-    occupation:{
+    email :{
         type: String,
         required: true,
-        minlength:3,
+        required: true,
         trim: true
     },
     address:{
@@ -25,14 +23,20 @@ const userSchema = mongoose.Schema({
         required: true,
         trim: true
     },
+    occupation:{
+        type: String,
+        required: true,
+        trim: true
+    },
     cost: {
         
         type: Number,
-         unique:true
+        required: true,
+
     }
 });
 
 
-const UserResult = mongoose.model('UserResult', userSchema)
+const AddUser = mongoose.model('AddUser', AddNewUser)
 
-export default UserResult;
+export default AddUser;

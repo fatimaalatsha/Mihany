@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import CardDeck from 'react-bootstrap/CardDeck';
 import axios from "axios";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
+"mdbreact";
+
 
 function showPosition(position) {
   console.log("Latitude: " + position.coords.latitude +
@@ -13,7 +16,7 @@ export default class Cards extends Component {
   handleClick ()  {
       navigator.geolocation.getCurrentPosition(showPosition);
                      
-             // window.location = '/ShowMihany';
+            // window.location = '/ShowMihany';
               
     };
 
@@ -26,9 +29,9 @@ export default class Cards extends Component {
                     <Card.Body>
                     <Card.Text>
 Mihany                    </Card.Text>                
-                    <button className = "btn btn-dark" 
+                    <button className = "btn btn-light" 
                                 onClick= {this.handleClick}
-                            >Find me Mihany</button>
+                            size="lg">Find me Mihany</button>
                     </Card.Body>
                     <Card.Footer>
                     </Card.Footer>

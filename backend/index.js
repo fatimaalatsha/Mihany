@@ -3,9 +3,12 @@ import Mongoose from 'mongoose';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import unirest from 'unirest'
+import dotenv from 'dotenv'
+
 //importing hrouts
-import homepageRoute from './routes/showResults.js'
+
 const app = express()
+dotenv.config()
 
 
 //app.use
@@ -14,10 +17,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(unirest)
 
-
+import homepageRoute from './routes/showResults.js'
+import newUserRoute from './routes/addUser.js'
+import SignInRoute from './routes/signIn.js'
 
 //using midle ware to conact
-app.use('/', homepageRoute )
+app.use('/', homepageRoute)
+app.use('/adduser', newUserRoute)
+app.use('/signin', SignInRoute)
 const PORT = process.env.PORT|| 3000;
 
 
@@ -41,7 +48,5 @@ Mongoose.connect(uri,connectionParams)
         console.error(`Error connecting to the database. \n${err}`);
     })
 
-
-    //
  
     

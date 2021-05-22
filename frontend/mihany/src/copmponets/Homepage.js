@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Slideshow from './slideShow';
-// import { MDBContainer, MDBFooter, MDBRow } from "mdbreact";
-import { Link ,withRouter } from "react-router-dom" ;
 import Cards from './Cards';
+import Slideshow from './slideShow';
+import { MDBContainer, MDBFooter, MDBRow } from "mdbreact";
+import { Link ,withRouter } from "react-router-dom" ;
 
 
 
@@ -17,7 +17,12 @@ class Homepage extends Component {
                 <Slideshow />
                 <br />
                 <Cards className = "d-flex justify-content-around"/>
-                <div className="footer-copyright text-center py-3">
+            <div className="footer-copyright text-center py-3">
+              <MDBFooter>
+                    <MDBContainer fluid>
+                        &copy; {new Date().getFullYear()} Mihany - All Rights Reserved to Abo Frank
+                    </MDBContainer>
+                </MDBFooter>
                   </div>
             </div>   
     )
