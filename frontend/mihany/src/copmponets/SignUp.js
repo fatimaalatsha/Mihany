@@ -73,11 +73,7 @@ export default class Signup extends Component {
                 email : e.target.value
             })
           }
-  // onChangeAddress() {
-            
-  //   this.setState({
-  //     address: e.target.value
-  //   })
+ 
   handleChange = address => {
     this.setState({ address })
   }
@@ -85,6 +81,7 @@ export default class Signup extends Component {
   handleSelect = address => {
     geocodeByAddress(address)
     this.setState({ address })
+    
   }
 
   
@@ -118,7 +115,7 @@ export default class Signup extends Component {
             console.log(user)
           axios.post("http://localhost:3000/addUser/adduser", user)
             .then(res => {
-            console.log(user);
+           window.location='/signIn'
             })  
              
            .catch(err => alert('user name or phone number is used') );
@@ -205,7 +202,15 @@ export default class Signup extends Component {
 
               <br></br>
                 <br></br>
-                <input required='true' type='text' className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation' />
+              {/* <input required='true' type='text' className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation' /> */}
+              <select required='true' type='text' className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation'               ref = "userInput"
+>
+                <option value = "Plumber">Plumber</option>
+                <option value = "Barber">Barber</option>
+                <option value = "Painter">Painter</option>
+                <option value = "Electrician">Electrician</option>
+                <option value = "Nurse">Nurse</option>
+              </select>
                 <br></br>
               <br></br>
                               <label > Cost </label>

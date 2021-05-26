@@ -1,38 +1,35 @@
 import mongoose from 'mongoose'
 
-const userSchema = mongoose.Schema({
+const addusers = mongoose.Schema({
     
+    name :{
+        type: String,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
     email :{
         type: String,
         required: true,
-        unique:true,
-        trim: true
-    },
-    name :{
-        type: String,
-        required: true,
-        minlength:3,
-        trim: true
-    },
-    occupation:{
-        type: String,
-        required: true,
-        minlength:3,
-        trim: true
+        unique:true
     },
     address:{
         type: String,
         required: true,
-        trim: true
+    },
+    occupation:{
+        type: String,
+        required: true
     },
     cost: {
         
         type: Number,
-         unique:true
+        required: true
     }
 });
 
 
-const UserResult = mongoose.model('UserResult', userSchema)
+const UserResult = mongoose.model('UserResult', addusers)
 
 export default UserResult;

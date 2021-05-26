@@ -5,7 +5,7 @@ import unirest from 'unirest'
 
 import { addUser } from '../controllers/addUser.js'
 
-router.post ('/adduser', addUser)
+router.post('/adduser', addUser)
 
 export default router;
   

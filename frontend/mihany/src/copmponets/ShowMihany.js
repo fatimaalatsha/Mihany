@@ -34,10 +34,14 @@ class ShowMihany extends Component {
   componentDidMount() {
     axios.get("http://localhost:3000/showMihany")
       .then(res => {
-        console.log(res.data)
+        // if (localStorage.address=== this.state.items.address) 
+          
+       
         this.setState({
-           items: res.data })
-        console.log(this.state.items)
+          items: res.data
+        })
+        console.log(res.data)
+        //console.log(localStorage.address)
       })
       .catch((error) => {
         console.log(error);

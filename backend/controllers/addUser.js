@@ -4,25 +4,29 @@ import bcrypt from 'bcrypt';
 export const addUser = async (req , res) => {
   //to hash the password when it is enterd 
   const salt = await bcrypt.genSalt(10)
-   const hashedPassword =  await bcrypt.hash(req.body.password, salt)
-
+  const hashedPassword =  await bcrypt.hash(req.body.password, salt)
+  const  name = req.body.name
+  const email = req.body.email
+  const address = req.body.address
+  const occupation = req.body.occupation
+  const   cost = req.body.cost
     const newUser = new AddUser({
         
-        name : req.body.name,
+        name : name,
 
-         password :  hashedPassword,
+         password : hashedPassword,
 
-          email : req.body.email,
+          email : email,
         
-        address : req.body.address,
+        address : address,
 
-        occupation : req.body.occupation,
+        occupation : occupation,
 
-        cost : req.body.cost
+        cost :cost
     });
    try{
-   const saveUser= await newUser.save()
-      res.send({saveUser:newUser._id})
+      await newUser.save()
+      res.send(newUser.name)
    }
    catch (err) {
        res.status(403).send(err)

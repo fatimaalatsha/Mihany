@@ -42,7 +42,7 @@ export default class Signin extends Component {
         axios.post("http://localhost:3000/signIn/signin", user)
         .then(response =>{
        //console.log (response)
-      window.localStorage.setItem('token', response.data);
+      window.location='/profile'
 
         })
         .catch(err =>alert("Email or password is incorrect") );

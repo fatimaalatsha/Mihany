@@ -12,5 +12,4 @@ import { showMihany } from '../controllers/showResults.js'
 
 
 router.get('/showMihany', showMihany)
-
 export default router;
