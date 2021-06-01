@@ -183,24 +183,12 @@ export default class Cards extends Component {
         )}
       </PlacesAutocomplete>                <br></br>
                 <br></br>
-
-                <CardDeck className = "text-center d-flex justify-content-between">
-                <Card>
-                    <Card.Body>
-                    <Card.Text>
-Mihany                    </Card.Text>                
                     <button className = "btn btn-light" 
                                 onClick= {this.handleClick}
                             size="lg">Find me Mihany</button>
-                    </Card.Body>
-                    <Card.Footer>
-                    </Card.Footer>
-                </Card>
-                <Card>
-                    
-                    <Card.Footer>
-                    </Card.Footer>
-                </Card>
+
+                <CardDeck className = "text-center d-flex justify-content-between">
+                                
                 <Card>
                     <Card.Img variant="top" src={process.env.PUBLIC_URL + "./Contributors.png"} />
                     <Card.Body>

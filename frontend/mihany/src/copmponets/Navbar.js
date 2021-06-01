@@ -13,15 +13,15 @@ export default class Navbar extends Component {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
             <br />
-              <p>Already have an account?</p>
-
-            <li class="nav-item">
+            <il class="nav-item">
+         {/* <p>Already have an account?</p> */}
           <a class="nav-link" href="/SignIn" tabindex="-1" aria-disabled="true">Sign In</a>
-            </li>
-                          <p>you do not have an account?</p>
 
-        <li class="nav-item">
+</il>
+            <li class="nav-item" >
+              {/* <p>you do not have an account?</p> */}
           <a class="nav-link" href="/adduser" tabindex="-1" aria-disabled="true"> Sign UP  Now</a>
+
             </li>
             <li class="nav-item">
           <a class="nav-link" href="/profile" tabindex="-1" aria-disabled="true"> profile </a>

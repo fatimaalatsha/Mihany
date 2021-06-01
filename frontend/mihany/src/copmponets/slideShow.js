@@ -19,7 +19,7 @@ export default class Slideshow extends Component {
    
                     
   </Carousel.Item>
-  {/* <Carousel.Item interval={5000}>
+   <Carousel.Item interval={5000}>
     <img
       className="d-block w-100 img-responsive"
       src="./adam-winger-WDmvpGs2060-unsplash.jpg"
@@ -36,7 +36,7 @@ export default class Slideshow extends Component {
                         width="50%" height="500px"
     />
   
-  </Carousel.Item> */}
+  </Carousel.Item> 
                 </Carousel>
                 </div>
                  </div>
