@@ -1,6 +1,5 @@
 import express from 'express'
 const router = express.Router();
-import  UserResult  from '../models/showResults.js'
 import unirest from 'unirest'
 //to imporst the function/ logec from the conterollers
 import { showMihany } from '../controllers/showResults.js'

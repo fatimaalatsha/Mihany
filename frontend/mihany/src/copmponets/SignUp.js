@@ -118,7 +118,7 @@ export default class Signup extends Component {
            window.location='/signIn'
             })  
              
-           .catch(err => alert('user name or phone number is used') );
+           .catch(err => alert(err) );
           
 
             //console.log('user added')   
@@ -203,7 +203,7 @@ export default class Signup extends Component {
               <br></br>
                 <br></br>
               {/* <input required='true' type='text' className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation' /> */}
-              <select required='true' type='text' className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation'               ref = "userInput"
+              <select required='true'  className="form-control"  value= {this.setState.occupation} onChange={this.onChangeOccupation} placeholder='Occupation'               ref = "userInput"
 >
                 <option value = "Plumber">Plumber</option>
                 <option value = "Barber">Barber</option>

@@ -1,32 +1,28 @@
-import AddUser from '../models/newUser.js'
+import AddNewUser from '../models/newUser.js'
 import bcrypt from 'bcrypt';
 
 export const addUser = async (req , res) => {
   //to hash the password when it is enterd 
   const salt = await bcrypt.genSalt(10)
-  const hashedPassword =  await bcrypt.hash(req.body.password, salt)
-  const  name = req.body.name
-  const email = req.body.email
-  const address = req.body.address
-  const occupation = req.body.occupation
-  const   cost = req.body.cost
-    const newUser = new AddUser({
+   const hashedPassword =  await bcrypt.hash(req.body.password, salt)
+
+    const newUser = new AddNewUser({
         
-        name : name,
+        name : req.body.name,
 
-         password : hashedPassword,
+         password :  hashedPassword,
 
-          email : email,
+          email : req.body.email,
         
-        address : address,
+        address : req.body.address,
 
-        occupation : occupation,
+        occupation : req.body.occupation,
 
-        cost :cost
+        cost : req.body.cost
     });
    try{
-      await newUser.save()
-      res.send(newUser.name)
+   const saveUser= await newUser.save()
+      res.send({saveUser:newUser._id})
    }
    catch (err) {
        res.status(403).send(err)
