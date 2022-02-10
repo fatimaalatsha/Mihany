@@ -4,23 +4,25 @@ const AddNewUser = mongoose.Schema({
     
     name :{
         type: String,
+        required: true
+
     },
     password: {
         type: String,
-        required: true,
+        required: true
     },
     email :{
         type: String,
         required: true,
-        unique:true,
+        unique:true
     },
     address:{
         type: String,
-        required: true,
+        required: true
     },
     occupation:{
         type: String,
-        required: true,
+        required: true
     },
     cost: {
         

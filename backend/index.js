@@ -33,7 +33,7 @@ const PORT = process.env.PORT|| 3000;
 // conacting the dtatbase using mongodb atals
 
 // the link for the cluster from the conact option 
-const uri = 'mongodb+srv://mihany:123mihany@cluster0.azgcn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://dar:dar@cluster0.ge9wy.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
  
 const connectionParams={
     useNewUrlParser: true,

@@ -41,8 +41,8 @@ export default class Signin extends Component {
         
         axios.post("http://localhost:3000/signIn/signin", user)
         .then(response =>{
-       //console.log (response)
-      window.location='/profile'
+       console.log (response)
+      window.location='/showMihany'
 
         })
         .catch(err =>alert("Email or password is incorrect") );

@@ -20,9 +20,10 @@ export const addUser = async (req , res) => {
 
         cost : req.body.cost
     });
-   try{
-   const saveUser= await newUser.save()
-      res.send({saveUser:newUser._id})
+  try {
+    //const saveUser =
+    await newUser.save()
+      res.send(/*{saveUser:*/newUser._id/*}*/)
    }
    catch (err) {
        res.status(403).send(err)
